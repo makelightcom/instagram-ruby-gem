@@ -54,6 +54,10 @@ def stub_get(path)
   stub_request(:get, Instagram.endpoint + path)
 end
 
+def stub_get_with_overridden_endpoint(endpoint, path)
+  stub_request(:get, endpoint + path)
+end
+
 def stub_post(path)
   stub_request(:post, Instagram.endpoint + path)
 end
